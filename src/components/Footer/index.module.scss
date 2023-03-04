@@ -1,0 +1,59 @@
+@import '../../styles/mixins';
+
+.background {
+  background-image: url("../../assets/images/footer/footer-background.png");
+  background-size: cover;
+  height: 166px;
+  padding-bottom: 13px;
+  @include component-wrapper();
+  @include display-flex($jc: start, $ai: end);
+}
+
+.footerWrapper {
+  @include display-flex(row, space-between, flex-start);
+  @include component-wrapper();
+  background-color: $blue-background;
+  padding-bottom: 50px;
+
+  .rightContent {
+    @include display-flex(column, center, flex-start);
+
+    .address {
+      @include main-titles()
+    }
+
+    .email {
+      @include main-text()
+    }
+
+    .phone {
+      @include main-text()
+    }
+
+    .contactIcons {
+      @include display-flex($cg: 23px);
+    }
+  }
+
+  .leftContent {
+    @include display-flex($cg: 87px, $ai: start);
+
+    .info {
+      @include display-flex($dc: column, $rg: 16px);
+
+      .title {
+        @include main-titles();
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    .trustIcons {
+      @include display-flex($dc: column);
+    }
+  }
+}

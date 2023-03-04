@@ -1,0 +1,43 @@
+@import './src/styles/mixins';
+@import './src/styles/variables';
+
+.ourBrand {
+  margin-bottom: 272px;
+  //@include component-wrapper();
+  padding: 0 195px;
+
+  .sectionHeading {
+    @include section-headings();
+    margin-bottom: 48px;
+  }
+
+  .values {
+    background: white;
+    padding: 62px 83px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 75px;
+    grid-row-gap: 110px;
+
+    border-radius: 25px;
+
+    .value {
+      @include display-flex($cg: 8px, $jc: start);
+
+      .title {
+        @include secondary-title();
+      }
+    }
+  }
+
+  .joinTeam {
+    @include display-flex();
+    margin-top: 32px;
+
+    .mainButton {
+      @include main-button();
+    }
+  }
+}

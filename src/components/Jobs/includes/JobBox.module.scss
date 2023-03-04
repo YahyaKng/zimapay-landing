@@ -1,0 +1,42 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.jobBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  border: $gray-2 1px solid;
+  border-radius: $main-radius;
+  padding: 24px;
+  width: 44%;
+
+
+  .title {
+    @include main-text();
+    justify-self: start;
+    align-self: center;
+  }
+
+  .position {
+    @include main-text();
+    justify-self: end;
+    padding: 12px 4px;
+    background: $gray-3;
+    border-radius: $secondary-radius;
+    max-height: 34px;
+  }
+
+  .open {
+    justify-self: start;
+    align-self: center;
+
+    .count {}
+    .text {}
+  }
+  .link {
+    justify-self: end;
+    align-self: center;
+  }
+}

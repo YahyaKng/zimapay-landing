@@ -1,0 +1,26 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.textAndImageContainer {
+  @include display-flex($cg: 110px, $jc: space-between);
+  padding-left: $page-main-x-padding;
+  margin-bottom: 275px;
+  background: url("../../assets/images/topBanner/background1.png") no-repeat 0% 100%;
+
+  .headingAndText {
+    @include display-flex($dc: column, $rg: 24px);
+    padding-top: 3rem;
+    padding-left: $page-main-x-padding;
+    max-width: 600px;
+    background: url("../../assets/images/arrows/medium-right.png") no-repeat 0% 0%;
+
+
+    .heading {
+      @include text-and-image-heading();
+    }
+
+    .text {
+      @include text-and-image-text();
+    }
+  }
+}

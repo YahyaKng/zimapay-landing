@@ -1,0 +1,28 @@
+@import './src/styles/mixins';
+@import './src/styles/variables';
+
+.jobs {
+  @include display-flex($dc: column, $rg: 48px);
+  @include component-wrapper();
+  margin-bottom: 168px;
+
+  .sectionHeading {
+    @include section-headings();
+  }
+
+  .positions {
+    @include display-flex($cg: 56px);
+
+    .button {
+      @include button-text();
+      background: none;
+      border: none;
+      border-radius: $secondary-radius;
+    }
+  }
+
+  .jobItems {
+    @include display-flex($jc: space-between);
+    flex-wrap: wrap;
+  }
+}

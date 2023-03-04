@@ -1,0 +1,14 @@
+@import "../../styles/mixins";
+
+.banner {
+  @include display-flex();
+  margin-bottom: 163px;
+  background: url("../../assets/images/banner/line-background.png");
+  padding: 0 $page-main-x-padding;
+
+  .arrow {
+    position: absolute;
+    top: 900px;
+    right: 255px;
+  }
+}

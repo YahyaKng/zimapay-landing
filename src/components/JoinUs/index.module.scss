@@ -1,0 +1,48 @@
+@import './src/styles/mixins';
+@import './src/styles/variables';
+
+.joinUs {
+  margin-bottom: 234px;
+  @include component-wrapper();
+
+  .sectionHeading {
+    @include section-headings();
+    margin-bottom: 112px;
+  }
+
+  .steps {
+    @include display-flex($cg: 120px);
+    position: relative;
+    //background: linear-gradient(to right, transparent 50%, #000 50%);
+    //background-size: 8px 2px;
+    //background-position: left bottom;
+    //background-repeat: repeat-x;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 70%;
+      width: 80%;
+      height: 2px;
+      background-color: $gray-2;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+
+    .step {
+      @include display-flex($dc: column);
+
+      .number {
+        color: $primary-blue;
+        font-size: 10px;
+        font-weight: 400;
+      }
+      .title {
+        color: $secondary-black;
+        font-size: 17px;
+        font-weight: 400;
+      }
+    }
+  }
+}

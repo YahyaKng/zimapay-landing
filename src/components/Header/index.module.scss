@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.header {
+  padding: 30px $page-main-x-padding;
+  min-height: 42px;
+  @include display-flex($jc: space-between, $cg: 73px);
+
+  .headerLogo {
+    img {
+      width: 178px;
+    }
+  }
+
+  .navList {
+    ul {
+      @include display-flex($jc: space-between, $cg: 40px);
+      @include header-links();
+    }
+  }
+
+  .leftContent {
+    @include display-flex($jc: space-between, $cg: 26px);
+
+    .icons {
+      @include display-flex($jc: space-between, $cg: 15px);
+    }
+
+    .signUp {
+      @include secondary-button()
+    }
+  }
+}
